@@ -1,0 +1,181 @@
+QID,Question,Option1,Option2,Option3,Option4,Answer,Subject
+1,Which keyword is used to define a function in Python?,func,def,lambda,define,def,Python
+2,Which data type is immutable in Python?,Dictionary,List,Set,Tuple,Tuple,Python
+3,Which library is mainly used for data analysis?,Pygame,Flask,Tkinter,Pandas,Pandas,Python
+4,Which library is used for numerical computing?,BeautifulSoup,Matplotlib,NumPy,Requests,NumPy,Python
+5,Which method adds an element to a list?,insertEnd(),push(),add(),append(),append(),Python
+6,Which keyword creates anonymous functions?,func,lambda,def,anon,lambda,Python
+7,Which function opens a file in Python?,open(),file(),read(),load(),open(),Python
+8,Which module generates random numbers?,math,random,os,time,random,Python
+9,Which method converts text to lowercase?,lower(),down(),small(),casefold(),lower(),Python
+10,Which operator checks equality?,!=,=,>=,==,==,Python
+11,Which library is used for machine learning?,Flask,Scikit-learn,Pygame,Tkinter,Scikit-learn,Python
+12,Which function displays output in Python?,display(),echo(),show(),print(),print(),Python
+13,Which statement skips current iteration?,pass,break,skip,continue,continue,Python
+14,Which keyword is used for exception handling?,except,error,catch,handle,except,Python
+15,Which library is used for plotting graphs?,Matplotlib,Requests,NumPy,Flask,Matplotlib,Python
+16,Which operator performs floor division?,**,%,/,//,//,Python
+17,Which method removes an item from a list?,remove(),delete(),erase(),discard(),remove(),Python
+18,Which keyword is used to create a class?,object,struct,define,class,class,Python
+19,Which function converts value to float?,str(),float(),int(),bool(),float(),Python
+20,Which collection stores unique elements?,List,Tuple,Set,Dictionary,Set,Python
+21,Which keyword is used for conditional statements?,case,when,switch,if,if,Python
+22,Which library is commonly used for web requests?,tkinter,pygame,requests,numpy,requests,Python
+23,Which method sorts a list?,sort(),rank(),arrange(),order(),sort(),Python
+24,Which function returns length of an object?,size(),len(),measure(),count(),len(),Python
+25,Which keyword stops a loop?,break,stop,continue,exit,break,Python
+26,Which file mode is used for reading?,r,a,x,w,r,Python
+27,Which function takes user input?,scan(),take(),input(),read(),input(),Python
+28,Which symbol is used for comments?,#,--,/*,//,#,Python
+29,Which keyword imports modules?,import,require,include,using,import,Python
+30,Which library is used for GUI applications?,Tkinter,NumPy,Pandas,Flask,Tkinter,Python
+31,Which SQL command retrieves data from a table?,SELECT,SHOW,FETCH,GET,SELECT,DBMS
+32,Which key uniquely identifies a row?,Alternate Key,Primary Key,Super Key,Foreign Key,Primary Key,DBMS
+33,Which SQL clause filters records?,WHERE,SORT,GROUP BY,ORDER BY,WHERE,DBMS
+34,Which JOIN returns matching rows from both tables?,LEFT JOIN,RIGHT JOIN,INNER JOIN,FULL JOIN,INNER JOIN,DBMS
+35,Which command removes all rows but keeps structure?,TRUNCATE,REMOVE,DELETE,DROP,TRUNCATE,DBMS
+36,Which statement modifies existing data?,CHANGE,ALTER,UPDATE,MODIFY,UPDATE,DBMS
+37,Which command adds new rows?,ADD,INSERT,APPEND,CREATE,INSERT,DBMS
+38,Which clause groups rows with similar values?,ORDER BY,WHERE,HAVING,GROUP BY,GROUP BY,DBMS
+39,Which SQL operator searches for patterns?,LIKE,SEARCH,MATCH,IN,LIKE,DBMS
+40,Which SQL command removes duplicate rows?,FILTER,UNIQUE,DISTINCT,REMOVE,DISTINCT,DBMS
+41,Which function counts rows?,AVG(),SUM(),COUNT(),MAX(),COUNT(),DBMS
+42,Which SQL clause sorts results?,HAVING,GROUP BY,ORDER BY,WHERE,ORDER BY,DBMS
+43,Which command deletes a table?,DELETE,DROP,REMOVE,CLEAR,DROP,DBMS
+44,Which key creates relationships between tables?,Composite Key,Unique Key,Foreign Key,Primary Key,Foreign Key,DBMS
+45,Which normal form removes transitive dependency?,BCNF,3NF,2NF,1NF,3NF,DBMS
+46,Which SQL function calculates average?,SUM(),AVG(),MEAN(),COUNT(),AVG(),DBMS
+47,Which clause filters grouped rows?,WHERE,ORDER BY,GROUP BY,HAVING,HAVING,DBMS
+48,Which command creates a new table?,MAKE,BUILD,NEW,CREATE,CREATE,DBMS
+49,Which statement changes table structure?,CHANGE,UPDATE,MODIFY,ALTER,ALTER,DBMS
+50,Which command saves transactions?,SAVE,MERGE,COMMIT,PUSH,COMMIT,DBMS
+51,Which command undoes transaction changes?,RESTORE,BACK,ROLLBACK,UNDO,ROLLBACK,DBMS
+52,Which operator checks NULL values?,CHECK NULL,NULL(),#NAME?,IS NULL,IS NULL,DBMS
+53,Which join returns all rows from left table?,LEFT JOIN,FULL JOIN,RIGHT JOIN,INNER JOIN,LEFT JOIN,DBMS
+54,Which database model uses tables?,Relational Model,Hierarchical Model,Network Model,Object Model,Relational Model,DBMS
+55,Which command removes specific rows?,DELETE,DROP,REMOVE,CLEAR,DELETE,DBMS
+56,Which SQL keyword renames columns?,ALTER,CHANGE,AS,RENAME,AS,DBMS
+57,Which command displays table structure?,TABLE,SHOW,DESCRIBE,VIEW,DESCRIBE,DBMS
+58,Which key can uniquely identify records?,Alternate Key,Candidate Key,Foreign Key,Duplicate Key,Candidate Key,DBMS
+59,Which command adds a column to a table?,ALTER,INSERT,UPDATE,MODIFY,ALTER,DBMS
+60,Which database stores data in collections?,Oracle,MongoDB,MySQL,PostgreSQL,MongoDB,DBMS
+61,Which method is the entry point in Java?,main(),init(),run(),start(),main(),Java
+62,Which keyword is used for inheritance?,extends,super,implements,inherits,extends,Java
+63,Which package contains Scanner class?,java.io,java.lang,java.net,java.util,java.util,Java
+64,Which keyword creates objects?,create,new,this,class,new,Java
+65,Which collection stores unique values?,ArrayList,LinkedList,HashSet,Vector,HashSet,Java
+66,Which keyword prevents inheritance?,final,private,const,static,final,Java
+67,Which method starts a thread?,begin(),run(),execute(),start(),start(),Java
+68,Which package is imported automatically?,java.lang,java.util,java.io,java.net,java.lang,Java
+69,Which loop executes at least once?,foreach,while,do-while,for,do-while,Java
+70,Which exception occurs when dividing by zero?,ArithmeticException,IOException,ClassNotFoundException,NullPointerException,ArithmeticException,Java
+71,Which keyword refers to current object?,super,this,self,current,this,Java
+72,Which access modifier is public everywhere?,protected,public,private,default,public,Java
+73,Which class is parent of all classes?,Object,Class,Main,Parent,Object,Java
+74,Which method compares strings?,same(),equals(),match(),compare(),equals(),Java
+75,Which collection stores key-value pairs?,Queue,HashSet,HashMap,ArrayList,HashMap,Java
+76,Which keyword handles exceptions?,handle,catch,except,error,catch,Java
+77,Which operator creates objects?,create,new,malloc,class,new,Java
+78,Which loop repeats while condition is true?,while,for,switch,if,while,Java
+79,Which interface supports sorting?,Cloneable,Runnable,Comparable,Serializable,Comparable,Java
+80,Which package handles input-output?,java.io,java.lang,java.util,java.net,java.io,Java
+81,Which keyword allows subclass access?,static,private,protected,public,protected,Java
+82,Which collection allows duplicate values?,Map,TreeSet,ArrayList,HashSet,ArrayList,Java
+83,Which keyword is used for abstraction?,interface,extends,abstract,virtual,abstract,Java
+84,Which statement exits loop?,stop,continue,break,return,break,Java
+85,Which keyword skips iteration?,skip,break,continue,pass,continue,Java
+86,Which method converts string to integer?,convert(),toInt(),parseInt(),int(),parseInt(),Java
+87,Which package contains ArrayList?,java.lang,java.util,java.io,java.net,java.util,Java
+88,Which collection follows FIFO?,Stack,Map,Queue,Set,Queue,Java
+89,Which keyword calls parent constructor?,super,extends,parent,this,super,Java
+90,Which datatype stores true or false?,char,boolean,int,float,boolean,Java
+91,Which device forwards packets between networks?,Bridge,Router,Hub,Switch,Router,Computer Networks
+92,Which protocol is connectionless?,TCP,UDP,FTP,HTTP,UDP,Computer Networks
+93,What does LAN stand for?,Linked Area Network,Large Area Network,Local Area Network,Logical Area Network,Local Area Network,Computer Networks
+94,Which protocol is used for web browsing?,FTP,SNMP,SMTP,HTTP,HTTP,Computer Networks
+95,Which command checks connectivity?,ping,ipconfig,netstat,route,ping,Computer Networks
+96,Which OSI layer handles routing?,Data Link Layer,Session Layer,Network Layer,Transport Layer,Network Layer,Computer Networks
+97,Which protocol transfers files?,FTP,ARP,DNS,SMTP,FTP,Computer Networks
+98,What does DNS convert?,IP to MAC,Files to Packets,Domain names to IP addresses,MAC to IP,Domain names to IP addresses,Computer Networks
+99,Which protocol provides reliable communication?,UDP,TCP,ICMP,ARP,TCP,Computer Networks
+100,Which topology uses a central hub?,Bus,Ring,Star,Mesh,Star,Computer Networks
+101,Which protocol sends emails?,HTTP,DNS,FTP,SMTP,SMTP,Computer Networks
+102,Which protocol receives emails?,FTP,POP3,SNMP,ARP,POP3,Computer Networks
+103,Which address identifies a device uniquely?,Gateway,Subnet,IP Address,MAC Address,MAC Address,Computer Networks
+104,Which protocol maps IP to MAC?,ICMP,ARP,RARP,DNS,ARP,Computer Networks
+105,Which layer ensures reliable delivery?,Transport Layer,Physical Layer,Session Layer,Network Layer,Transport Layer,Computer Networks
+106,Which cable is used in Ethernet?,Fiber,Coaxial,USB,Twisted Pair,Twisted Pair,Computer Networks
+107,Which protocol secures websites?,HTTPS,FTP,HTTP,TELNET,HTTPS,Computer Networks
+108,Which topology forms a circle?,Ring,Tree,Bus,Star,Ring,Computer Networks
+109,Which topology uses single backbone?,Star,Ring,Mesh,Bus,Bus,Computer Networks
+110,Which command shows IP configuration?,tracert,ping,ipconfig,route,ipconfig,Computer Networks
+111,Which protocol tests network errors?,ARP,UDP,ICMP,TCP,ICMP,Computer Networks
+112,Which network covers large cities?,WAN,MAN,PAN,LAN,MAN,Computer Networks
+113,Which network covers worldwide area?,MAN,PAN,LAN,WAN,WAN,Computer Networks
+114,Which device connects similar networks?,Bridge,Hub,Repeater,Router,Bridge,Computer Networks
+115,Which device amplifies signals?,Switch,Repeater,Bridge,Router,Repeater,Computer Networks
+116,Which layer handles physical transmission?,Session Layer,Application Layer,Physical Layer,Transport Layer,Physical Layer,Computer Networks
+117,Which protocol assigns IP addresses automatically?,FTP,DNS,DHCP,ARP,DHCP,Computer Networks
+118,Which command traces packet route?,tracert,ipconfig,ping,netstat,tracert,Computer Networks
+119,Which topology has every node connected?,Bus,Mesh,Ring,Star,Mesh,Computer Networks
+120,Which protocol transfers web pages?,HTTP,ARP,SMTP,FTP,HTTP,Computer Networks
+121,Which algorithm is used for classification?,Logistic Regression,Apriori,K-Means,PCA,Logistic Regression,Machine Learning
+122,Which learning uses labeled data?,Supervised Learning,Semi-supervised,Unsupervised Learning,Reinforcement Learning,Supervised Learning,Machine Learning
+123,Which metric measures prediction correctness?,Variance,Bias,Recall,Accuracy,Accuracy,Machine Learning
+124,Which algorithm groups similar data?,K-Means,SVM,Random Forest,Decision Tree,K-Means,Machine Learning
+125,Which term means memorizing training data?,Overfitting,Underfitting,Clustering,Normalization,Overfitting,Machine Learning
+126,Which algorithm predicts continuous values?,Linear Regression,KNN,Decision Tree,Naive Bayes,Linear Regression,Machine Learning
+127,Which library is popular for deep learning?,TensorFlow,Pandas,Flask,NumPy,TensorFlow,Machine Learning
+128,Which process removes missing values?,Data Cleaning,Feature Scaling,Training,Testing,Data Cleaning,Machine Learning
+129,Which graph compares predictions?,Confusion Matrix,Histogram,Bar Graph,Pie Chart,Confusion Matrix,Machine Learning
+130,Which technique reduces dimensions in data?,Clustering,RNN,CNN,PCA,PCA,Machine Learning
+131,Which model is inspired by the human brain?,Linear Regression,Decision Tree,Naive Bayes,Neural Network,Neural Network,Machine Learning
+132,Which learning method uses rewards?,Regression,Classification,Reinforcement Learning,Supervised Learning,Reinforcement Learning,Machine Learning
+133,Which algorithm is commonly used for spam detection?,PCA,K-Means,Naive Bayes,CNN,Naive Bayes,Machine Learning
+134,Which term refers to input variables?,Features,Epochs,Clusters,Labels,Features,Machine Learning
+135,Which metric measures positive predictions?,Variance,Bias,Precision,Loss,Precision,Machine Learning
+136,Which dataset is used to evaluate model performance?,Training Data,Test Data,Raw Data,Validation Data,Test Data,Machine Learning
+137,Which process scales data values?,Encoding,Clustering,Cleaning,Normalization,Normalization,Machine Learning
+138,Which algorithm uses decision boundaries?,SVM,KNN,PCA,Apriori,SVM,Machine Learning
+139,Which network is used for image recognition?,PCA,RNN,KNN,CNN,CNN,Machine Learning
+140,Which network is used for sequential data?,Decision Tree,RNN,SVM,CNN,RNN,Machine Learning
+141,Which term means too little learning?,Clustering,Bias,Underfitting,Overfitting,Underfitting,Machine Learning
+142,Which chart evaluates classifiers?,Pie Chart,Histogram,Scatter Plot,ROC Curve,ROC Curve,Machine Learning
+143,Which algorithm finds nearest neighbors?,PCA,RNN,K-Means,KNN,KNN,Machine Learning
+144,Which term refers to one full training cycle?,Feature,Cluster,Batch,Epoch,Epoch,Machine Learning
+145,Which library is used for numerical arrays?,Flask,NumPy,Pygame,TensorFlow,NumPy,Machine Learning
+146,Which algorithm builds multiple trees?,Random Forest,Linear Regression,PCA,KNN,Random Forest,Machine Learning
+147,Which process converts categories into numbers?,Testing,Scaling,Cleaning,Encoding,Encoding,Machine Learning
+148,Which algorithm is unsupervised?,SVM,Logistic Regression,K-Means,Naive Bayes,K-Means,Machine Learning
+149,Which metric balances precision and recall?,Accuracy,Variance,Loss,F1 Score,F1 Score,Machine Learning
+150,Which tool visualizes ML data?,Matplotlib,Requests,Tkinter,Flask,Matplotlib,Machine Learning
+151,Which cloud model provides software over internet?,PaaS,IaaS,SaaS,DaaS,SaaS,Cloud Computing
+152,Which AWS service provides virtual machines?,EC2,S3,Lambda,RDS,EC2,Cloud Computing
+153,Which tool is used for containerization?,Maven,Docker,Jenkins,Git,Docker,Cloud Computing
+154,Which cloud type is public?,Public Cloud,Community Cloud,Private Cloud,Hybrid Cloud,Public Cloud,Cloud Computing
+155,Which feature increases resources automatically?,Caching,Scaling,Encryption,Threading,Scaling,Cloud Computing
+156,Which AWS service stores files?,Lambda,EC2,IAM,S3,S3,Cloud Computing
+157,Which model provides development platform?,SaaS,IaaS,PaaS,NaaS,PaaS,Cloud Computing
+158,Which service distributes traffic?,Load Balancer,Gateway,Firewall,Proxy,Load Balancer,Cloud Computing
+159,Which technology creates virtual machines?,Sharding,Threading,Virtualization,Clustering,Virtualization,Cloud Computing
+160,Which AWS service manages permissions?,CloudFront,RDS,EC2,IAM,IAM,Cloud Computing
+161,Which service runs code without servers?,Lambda,EC2,EBS,S3,Lambda,Cloud Computing
+162,Which cloud model provides hardware resources?,PaaS,IaaS,DBaaS,SaaS,IaaS,Cloud Computing
+163,Which company provides Azure cloud?,Amazon,Microsoft,Google,IBM,Microsoft,Cloud Computing
+164,Which company provides GCP?,Oracle,Google,Amazon,Meta,Google,Cloud Computing
+165,Which service stores block storage?,S3,EBS,Lambda,IAM,EBS,Cloud Computing
+166,Which service provides CDN in AWS?,EC2,RDS,CloudFront,SQS,CloudFront,Cloud Computing
+167,Which cloud allows dedicated infrastructure?,Public Cloud,Private Cloud,Shared Cloud,Hybrid Cloud,Private Cloud,Cloud Computing
+168,Which architecture breaks apps into services?,Microservices,Client-Server,Monolithic,Layered,Microservices,Cloud Computing
+169,Which service queues messages?,S3,SQS,IAM,EC2,SQS,Cloud Computing
+170,Which practice combines development and operations?,DevOps,Testing,Scrum,Agile,DevOps,Cloud Computing
+171,Which service is used for databases?,IAM,S3,CloudFront,RDS,RDS,Cloud Computing
+172,Which cloud model combines public and private?,Edge Cloud,Private Cloud,Public Cloud,Hybrid Cloud,Hybrid Cloud,Cloud Computing
+173,Which tool automates infrastructure?,Git,Maven,Terraform,Docker,Terraform,Cloud Computing
+174,Which service monitors AWS resources?,CloudTrail,EC2,CloudWatch,S3,CloudWatch,Cloud Computing
+175,Which service records API calls?,CloudWatch,CloudTrail,IAM,Lambda,CloudTrail,Cloud Computing
+176,Which service handles DNS in AWS?,Route 53,RDS,S3,EC2,Route 53,Cloud Computing
+177,Which computing style processes near devices?,Cloud Storage,Scaling,Virtualization,Edge Computing,Edge Computing,Cloud Computing
+178,Which cloud feature provides flexibility?,Elasticity,Caching,Encryption,Latency,Elasticity,Cloud Computing
+179,Which tool manages containers?,Git,Jenkins,Kubernetes,Flask,Kubernetes,Cloud Computing
+180,Which service stores relational databases?,RDS,IAM,S3,DynamoDB,RDS,Cloud Computing
