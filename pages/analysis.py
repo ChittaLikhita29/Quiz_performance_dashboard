@@ -106,6 +106,26 @@ if analysis_type == "Self Analysis":
 
     st.success(f"🏆 Strongest: {subject_avg.idxmax()}")
     st.warning(f"📌 Weakest: {subject_avg.idxmin()}")
+    
+    st.subheader("📈 Performance Trend (Improvement Over Time)")
+
+trend_df = user_df.sort_values("Timestamp").copy()
+
+fig, ax = plt.subplots()
+
+ax.plot(
+    trend_df["Timestamp"],
+    trend_df["Percent"],
+    marker="o"
+)
+
+ax.set_xlabel("Time")
+ax.set_ylabel("Percentage")
+ax.set_title("Score Improvement Trend")
+
+plt.xticks(rotation=45)
+
+st.pyplot(fig)
 
 # ===================================================
 # COMPARE WITH OTHERS
