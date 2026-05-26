@@ -15,10 +15,6 @@ st.set_page_config(
 
 st.title("📊 Quiz Analysis Dashboard")
 
-# ---------------------------------------------------
-# FILE PATH
-# ---------------------------------------------------
-
 RESULTS_PATH = "results.csv"
 
 # ---------------------------------------------------
@@ -56,16 +52,19 @@ if results_df.empty:
     st.stop()
 
 # ---------------------------------------------------
-# AUTO USER (IMPORTANT FIX)
+# USER SELECTION (FIXED)
 # ---------------------------------------------------
 
-current_user = results_df.iloc[-1]["Name"]
+all_users = sorted(results_df["Name"].unique())
 
-st.sidebar.success(f"Logged in as: {current_user}")
+current_user = st.sidebar.selectbox(
+    "Select User for Analysis",
+    all_users
+)
 
-user_df = results_df[
-    results_df["Name"] == current_user
-].sort_values("Timestamp")
+st.sidebar.success(f"Analyzing: {current_user}")
+
+user_df = results_df[results_df["Name"] == current_user].sort_values("Timestamp")
 
 # ---------------------------------------------------
 # MENU
@@ -80,7 +79,6 @@ analysis_type = st.sidebar.radio(
         "Overall Statistics"
     ]
 )
-
 
 # ===================================================
 # SELF ANALYSIS
@@ -97,7 +95,6 @@ if analysis_type == "Self Analysis":
     col3.metric("Average %", round(user_df["Percent"].mean(), 2))
     col4.metric("Latest Score", int(user_df.iloc[-1]["Score"]))
 
-  
     st.subheader("📚 Subject-wise Performance")
 
     subject_avg = user_df.groupby("Subject")["Percent"].mean()
@@ -111,14 +108,12 @@ if analysis_type == "Self Analysis":
     st.warning(f"📌 Weakest: {subject_avg.idxmin()}")
 
 # ===================================================
-# COMPARE WITH OTHERS (FIXED)
+# COMPARE WITH OTHERS
 # ===================================================
 
 elif analysis_type == "Compare With Others":
 
     st.header(f"⚔ Comparison - {current_user}")
-
-    # ONLY INFO (NO FIRST GRAPH AS REQUESTED)
 
     st.info(
         f"""
@@ -174,13 +169,8 @@ elif analysis_type == "Leaderboard":
 
     fig, ax = plt.subplots()
 
-    ax.bar(
-        top["Name"],   # ✅ NAME instead of index
-        top["Percent"]
-    )
-
+    ax.bar(top["Name"], top["Percent"])
     ax.set_ylabel("Average %")
-
     plt.xticks(rotation=45)
 
     st.pyplot(fig)
@@ -216,25 +206,33 @@ elif analysis_type == "Overall Statistics":
     subject_perf.plot(kind="bar", ax=ax)
     st.pyplot(fig)
 
+
+
 # ---------------------------------------------------
-# CLEAN DISPLAY TABLE
+# DOWNLOAD CSV (USER-SPECIFIC FIX)
 # ---------------------------------------------------
 
-st.subheader("📋 Student Performance")
+st.subheader("⬇ Download Results")
 
-clean_df = results_df[[
+# ONLY SELECTED USER DATA
+download_df = user_df[[
     "Name",
     "Subject",
     "Score",
-    "Total",
     "Percent",
     "Timestamp"
 ]].copy()
 
-# FIX TIMESTAMP (remove #### issue)
-clean_df["Timestamp"] = pd.to_datetime(
-    clean_df["Timestamp"],
+download_df["Timestamp"] = pd.to_datetime(
+    download_df["Timestamp"],
     errors="coerce"
 ).dt.strftime("%Y-%m-%d %H:%M:%S")
 
-st.dataframe(clean_df, use_container_width=True)
+csv_data = download_df.to_csv(index=False)
+
+st.download_button(
+    label=f"⬇ Download {current_user}'s Results ",
+    data=csv_data,
+    file_name=f"{current_user}_quiz_results.csv",
+    mime="text/csv"
+)
