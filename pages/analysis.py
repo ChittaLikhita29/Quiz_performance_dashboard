@@ -21,9 +21,8 @@ RESULTS_PATH = "results.csv"
 # LOAD DATA
 # ---------------------------------------------------
 
-@st.cache_data
+@st.cache_data(ttl=2)
 def load_results():
-
     if not os.path.exists(RESULTS_PATH):
         return pd.DataFrame()
 
@@ -43,24 +42,28 @@ def load_results():
 
 results_df = load_results()
 
-# ---------------------------------------------------
-# EMPTY CHECK
-# ---------------------------------------------------
-
 if results_df.empty:
     st.warning("No quiz results found.")
     st.stop()
 
 # ---------------------------------------------------
-# USER SELECTION (FIXED)
+# USER SELECTION (URL + DROPDOWN FIX)
 # ---------------------------------------------------
+
+query_params = st.query_params
+url_user = query_params.get("user", None)
 
 all_users = sorted(results_df["Name"].unique())
 
-current_user = st.sidebar.selectbox(
-    "Select User for Analysis",
-    all_users
-)
+if url_user and url_user in all_users:
+    current_user = url_user
+    st.sidebar.info(f"URL Mode Active: {current_user}")
+else:
+    current_user = st.sidebar.selectbox(
+        "Select User for Analysis",
+        all_users
+    )
+    st.sidebar.info("Manual Selection Mode")
 
 st.sidebar.success(f"Analyzing: {current_user}")
 
@@ -107,21 +110,20 @@ if analysis_type == "Self Analysis":
     st.success(f"🏆 Strongest: {subject_avg.idxmax()}")
     st.warning(f"📌 Weakest: {subject_avg.idxmin()}")
 
-    st.subheader("📈 Performance Trend (Improvement Over Time)")
+    # ---------------------------------------------------
+    # TREND ANALYSIS
+    # ---------------------------------------------------
 
-    trend_df = user_df.sort_values("Timestamp").copy()
+    st.subheader("📈 Performance Trend Over Time")
+
+    trend_df = user_df.sort_values("Timestamp")
 
     fig, ax = plt.subplots()
-
-    ax.plot(
-    trend_df["Timestamp"],
-    trend_df["Percent"],
-    marker="o"
-    )
+    ax.plot(trend_df["Timestamp"], trend_df["Percent"], marker="o")
 
     ax.set_xlabel("Time")
     ax.set_ylabel("Percentage")
-    ax.set_title("Score Improvement Trend")
+    ax.set_title("Score Trend")
 
     plt.xticks(rotation=45)
 
@@ -188,11 +190,9 @@ elif analysis_type == "Leaderboard":
     top = leaderboard.head(10)
 
     fig, ax = plt.subplots()
-
     ax.bar(top["Name"], top["Percent"])
     ax.set_ylabel("Average %")
     plt.xticks(rotation=45)
-
     st.pyplot(fig)
 
 # ===================================================
@@ -226,15 +226,12 @@ elif analysis_type == "Overall Statistics":
     subject_perf.plot(kind="bar", ax=ax)
     st.pyplot(fig)
 
-
-
 # ---------------------------------------------------
-# DOWNLOAD CSV (USER-SPECIFIC FIX)
+# DOWNLOAD CSV (USER-SPECIFIC)
 # ---------------------------------------------------
 
 st.subheader("⬇ Download Results")
 
-# ONLY SELECTED USER DATA
 download_df = user_df[[
     "Name",
     "Subject",
@@ -251,7 +248,7 @@ download_df["Timestamp"] = pd.to_datetime(
 csv_data = download_df.to_csv(index=False)
 
 st.download_button(
-    label=f"⬇ Download {current_user}'s Results ",
+    label=f"⬇ Download {current_user}'s Results",
     data=csv_data,
     file_name=f"{current_user}_quiz_results.csv",
     mime="text/csv"
